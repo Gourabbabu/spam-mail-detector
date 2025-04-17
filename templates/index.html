@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spam Mail Detector</title>
+  </head>
+  <body>
+    <h1>Spam Email Classifier</h1>
+    <form method="POST" action="/">
+      <textarea
+        name="message"
+        rows="8"
+        cols="50"
+        placeholder="Enter your email content here..."
+      ></textarea
+      ><br /><br />
+      <input type="submit" value="Check if Spam" />
+    </form>
+
+    {% if result %}
+    <h2>Prediction: {{ result }}</h2>
+    {% endif %}
+  </body>
+</html>
